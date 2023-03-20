@@ -12,7 +12,7 @@ def build_heap(data):
 def sift(amount, data, swaps, i):
     min_index = i
     left_child = 2*i+1
-    right_child = 2*1+2
+    right_child = 2*i+2
     
     if left_child < amount and data[min_index] > data[left_child]:
         min_index = left_child
@@ -45,8 +45,10 @@ def main():
             with open(file_path, "r", encoding="utf-8") as f:
                 n = int(f.readline().strip())
                 data = list(map(int, f.readline().strip().split()))
-            swaps = build_heap(data)
+                swaps = build_heap(data)
+
             assert len(data) == n
+
             print(len(swaps))
             for i, j in swaps:
                 print(i, j)
