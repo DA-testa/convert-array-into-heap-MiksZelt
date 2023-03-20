@@ -10,19 +10,17 @@ def build_heap(data):
     return swaps
 
 def sift(amount, data, swaps, i):
-    min_index = i
     left_child = 2*i+1
     right_child = 2*1-1
+    min_index = i
     
     if left_child < amount and data[min_index] > data[left_child]:
         min_index = left_child
-
     if right_child < amount and data[min_index] > data[right_child]:
         min_index = right_child
-
     if min_index != i:
-        swaps.append((i, min_index))
         data[i], data[min_index] = data[min_index], data[i]
+        swaps.append((i, min_index))
         sift(amount, data, swaps, min_index)
 
 
