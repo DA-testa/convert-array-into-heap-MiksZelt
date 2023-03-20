@@ -25,8 +25,9 @@ def sift(amount, data, swaps, i):
 
 
 def main():
-    data = 0
+
     text = input()
+    
     if text == "I":
         n = int(input())
         data = list(map(int, input().strip().split()))
