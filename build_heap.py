@@ -25,9 +25,9 @@ def sift(amount, data, swaps, i):
 
 
 def main():
-    data = 0
+
     text = input()
-    if "I" in text:
+    if text == "I":
         n = int(input())
         data = list(map(int, input().strip().split()))
 
@@ -38,14 +38,15 @@ def main():
             print(i, j)
 
 
-    elif "F" in text:
+    elif text == "F":
         file_name = input()
         if "a" not in file_name:
             file_path = "tests/" + file_name
-            with open(file_path, , encoding="utf-8") as f:
+            with open(file_path, "r", encoding="utf-8") as f:
                 n = int(f.readline().strip())
                 data = list(map(int, f.readline().strip().split()))
-                swaps = build_heap(data)
+
+            swaps = build_heap(data)
             assert len(data) == n
             print(len(swaps))
             for i, j in swaps:
