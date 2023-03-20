@@ -11,7 +11,7 @@ def build_heap(data):
 
 def sift(amount, data, swaps, i):
     left_child = 2*i+1
-    right_child = 2*1-1
+    right_child = 2*1+2
     min_index = i
     
     if left_child < amount and data[min_index] > data[left_child]:
