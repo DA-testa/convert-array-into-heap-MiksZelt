@@ -30,8 +30,8 @@ def main():
 
    text = input()
    if "F" in text:
-    file_n = input()
-    if "a" not in file_n:
+      file_n = input()
+      if "a" not in file_n:
         file_p = "tests/" + file_n
         with open(file_p, "r", encoding = "utf-8") as f:
             n = int(f.readline().strip())
