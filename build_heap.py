@@ -35,7 +35,7 @@ def main():
         filename = input()
         with open("tests/"+filename, 'r') as f:
             n = int(f.readline().strip())
-            data = list(map(int, f.readline().split()))
+            data = list(map(int, f.readline().strip().split()))
 
     assert len(data) == n 
 
