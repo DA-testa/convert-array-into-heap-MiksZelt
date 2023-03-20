@@ -40,12 +40,12 @@ def main():
 
     elif "F" in text:
         file_name = input()
-        if "a" not in file_name:
-            file_path = "tests/" + file_name
-            with open(file_path, 'r', encoding="utf-8") as f:
-                n = int(f.readline().strip())
-                data = list(map(int, f.readline().strip().split()))
-                swaps = build_heap(data)
+        while True:
+            try:
+                file_name = "/tests" + input()
+                with open(file_name, 'r', encoding="utf-8") as f:
+                    n = int(f.readline().strip())
+                    data = list(map(int, f.readline().strip().split()))
 
             assert len(data) == n
             print(len(swaps))
