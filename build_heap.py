@@ -25,7 +25,7 @@ def sift(amount, data, swaps, i):
 
 
 def main():
-    
+    data = 0
     text = input()
     if "I" in text:
         n = int(input())
