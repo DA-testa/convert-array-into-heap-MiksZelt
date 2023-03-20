@@ -31,27 +31,20 @@ def main():
         n = int(input())
         data = list(map(int, input().strip().split()))
 
-        assert len(data) == n
-        swaps = build_heap(data)
-        print(len(swaps))
-        for i, j in swaps:
-            print(i, j)
-
 
     elif "F" in text:
         file_name = input()
-        while True:
-            try:
-                file_name = "/tests" + input()
-                with open(file_name, 'r', encoding="utf-8") as f:
-                    n = int(f.readline().strip())
-                    data = list(map(int, f.readline().strip().split()))
-                    
-            swaps = build_heap(data)
-            assert len(data) == n
-            print(len(swaps))
-            for i, j in swaps:
-                print(i, j)
+        if "a" not in file_name:
+            file_path = "tests/" + file_name
+            with open(file_path, , encoding="utf-8") as f:
+                n = int(f.readline().strip())
+                data = list(map(int, f.readline().strip().split()))
+                
+    swaps = build_heap(data)
+    assert len(data) == n
+    print(len(swaps))
+    for i, j in swaps:
+        print(i, j)
 
 
 if __name__ == "__main__":
