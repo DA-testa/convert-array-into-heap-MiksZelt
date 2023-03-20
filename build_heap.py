@@ -40,10 +40,10 @@ def main():
         if "a" not in file_name:
             file_path = "tests/" + file_name
             with open(fails,"r", encoding="utf-8") as f:
-                elements = int(f.readline().strip())
+                n = int(f.readline().strip())
                 data = list((map(int, f.readline().strip().split())))
                 swaps = build_heap(data)
-            assert len(data) == elements
+            assert len(data) == n
             print(len(swaps))
             for i, j in swaps:
                 print(i, j)
