@@ -25,7 +25,7 @@ def sift(amount, data, swaps, i):
 
 
 def main():
-
+    data = []
     text = input()
     
     if text == "I":
@@ -34,7 +34,7 @@ def main():
 
     elif text == "F":
         filename = input()
-        with open("tests/"+filename, 'r') as f:
+        with open("./tests/"+filename, 'r') as f:
             n = int(f.readline().strip())
             data = list(map(int, f.readline().strip().split()))
 
