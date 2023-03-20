@@ -44,6 +44,7 @@ def main():
         assert len(data) == n
         swaps = build_heap(data)
 
+
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
