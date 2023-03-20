@@ -10,9 +10,9 @@ def build_heap(data):
     return swaps
 
 def sift(amount, data, swaps, i):
+    min_index = i
     left_child = 2*i+1
     right_child = 2*1+2
-    min_index = i
     
     if left_child < amount and data[min_index] > data[left_child]:
         min_index = left_child
@@ -25,8 +25,8 @@ def sift(amount, data, swaps, i):
 
 
 def main():
-
-   text = input()
+    
+    text = input()
     if "I" in text:
         n = int(input())
         data = list((map(int, input().strip().split())))
