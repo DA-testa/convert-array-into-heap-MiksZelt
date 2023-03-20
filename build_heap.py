@@ -35,7 +35,6 @@ def main():
         print(len(swaps))
         for i, j in swaps:
             print(i, j)
-        
     elif "F" in text:
         file_name = input()
         if "a" not in file_name:
