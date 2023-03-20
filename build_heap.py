@@ -46,7 +46,7 @@ def main():
                 with open(file_name, 'r', encoding="utf-8") as f:
                     n = int(f.readline().strip())
                     data = list(map(int, f.readline().strip().split()))
-
+            swaps = build_heap(data)
             assert len(data) == n
             print(len(swaps))
             for i, j in swaps:
