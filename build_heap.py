@@ -40,8 +40,8 @@ def main():
                 n = int(f.readline().strip())
                 data = list(map(int, f.readline().strip().split()))
                 
-    swaps = build_heap(data)
     assert len(data) == n
+    swaps = build_heap(data)
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
